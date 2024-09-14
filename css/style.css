@@ -10,6 +10,7 @@ header {
     color: #fff;
     padding: 10px 0;
     text-align: center;
+    position: relative;
 }
 
 main {
@@ -28,7 +29,7 @@ main {
     border-radius: 7px;
     padding: 14px;  
     margin: 10px;
-    
+    width: calc(20% - 20px);
 }
 
 .card img {
@@ -43,10 +44,9 @@ main {
 }
 
 .card-content h2 {
-    font-size: 1em;
+    font-size: 1rem;
     margin: 10px 0;
     height: 40px;
-
 }
 
 .card-content p {
@@ -68,4 +68,24 @@ main {
     padding: 5px 10px; 
     cursor: pointer;
     font-size: 0.9em; 
+}
+
+.navigation {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.nav-link {
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #0056b3;
 }
