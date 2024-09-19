@@ -22,7 +22,8 @@ main {
 #carrito {
     border: 1px solid #cec69f;
     padding: 20px;
-    width: 60%;
+    width: 90%; /* Cambiado para ser más responsivo */
+    max-width: 600px; /* Ancho máximo */
     margin: auto;
     background-color: #ffffff; /* Fondo claro del carrito */
     border-radius: 10px;
@@ -110,4 +111,16 @@ button:hover {
 
 .nav-link:hover {
     background-color: #aea881; /* Hover más oscuro */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    #carrito {
+        width: 90%; /* Ancho ajustado para pantallas más pequeñas */
+    }
+
+    .producto {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        align-items: flex-start; /* Alinear a la izquierda */
+    }
 }

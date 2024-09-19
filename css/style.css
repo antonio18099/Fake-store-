@@ -32,6 +32,11 @@ main {
     margin: 10px;
     width: calc(20% - 20px);
     color: #908a65;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efecto de hover */
 }
 
 .card img {
@@ -99,25 +104,24 @@ main {
 }
 
 /* Estilos para la notificación */
-/* Estilos para la notificación */
 #notification {
     display: none;
     position: fixed;
     top: 10px;
     right: 10px;
-    background-color: #fef7d4; /* Color de fondo */
-    color: #908a65; /* Color de texto */
+    background-color: #fef7d4;
+    color: #908a65;
     padding: 15px;
-    border: 1px solid #cec69f; /* Borde */
+    border: 1px solid #cec69f;
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     font-size: 0.9em;
     z-index: 1000;
 }
 
 #notification.show {
-    display: block; /* Mostrar notificación */
-    animation: fadein 0.5s, fadeout 0.5s 2.5s; /* Animaciones */
+    display: block;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
 @keyframes fadein {
@@ -128,4 +132,21 @@ main {
 @keyframes fadeout {
     from { opacity: 1; }
     to { opacity: 0; }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .card {
+        width: calc(45% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: calc(100% - 20px);
+    }
+
+    .nav-link {
+        padding: 5px 10px;
+    }
 }
