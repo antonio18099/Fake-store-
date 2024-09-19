@@ -2,11 +2,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000000;
+    background-color: #fffae2; /* Fondo principal */
+    color: #908a65; /* Texto principal */
 }
 
 header {
-    background-color: #1ba653f6;
+    background-color: #aea881; /* Color del header */
     color: #fff;
     padding: 10px 0;
     text-align: center;
@@ -24,12 +25,13 @@ main {
 }
 
 .card {
-    background-color: #ffffff;
-    border: 1px solid #ccc;
+    background-color: #fff; /* Fondo claro para las tarjetas */
+    border: 1px solid #cec69f;
     border-radius: 7px;
     padding: 14px;  
     margin: 10px;
     width: calc(20% - 20px);
+    color: #908a65;
 }
 
 .card img {
@@ -47,11 +49,13 @@ main {
     font-size: 1rem;
     margin: 10px 0;
     height: 40px;
+    color: #908a65;
 }
 
 .card-content p {
     margin: 5px 0;
     font-size: 0.8em;
+    color: #908a65;
 }
 
 .actions {
@@ -61,13 +65,17 @@ main {
 }
 
 .add-to-cart {
-    background-color: #28a745; 
+    background-color: #cec69f; /* Botón con paleta de color */
     color: #fff;
     border: none;
     border-radius: 5px;
     padding: 5px 10px; 
     cursor: pointer;
     font-size: 0.9em; 
+}
+
+.add-to-cart:hover {
+    background-color: #aea881; /* Hover más oscuro */
 }
 
 .navigation {
@@ -77,7 +85,7 @@ main {
 }
 
 .nav-link {
-    background-color: #007bff;
+    background-color: #cec69f; /* Enlaces de navegación */
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -87,5 +95,37 @@ main {
 }
 
 .nav-link:hover {
-    background-color: #0056b3;
+    background-color: #aea881; /* Hover más oscuro */
+}
+
+/* Estilos para la notificación */
+/* Estilos para la notificación */
+#notification {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #fef7d4; /* Color de fondo */
+    color: #908a65; /* Color de texto */
+    padding: 15px;
+    border: 1px solid #cec69f; /* Borde */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    font-size: 0.9em;
+    z-index: 1000;
+}
+
+#notification.show {
+    display: block; /* Mostrar notificación */
+    animation: fadein 0.5s, fadeout 0.5s 2.5s; /* Animaciones */
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeout {
+    from { opacity: 1; }
+    to { opacity: 0; }
 }

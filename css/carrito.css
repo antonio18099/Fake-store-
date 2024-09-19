@@ -1,17 +1,113 @@
-.navigation {
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fffae2; /* Fondo del carrito */
+    color: #908a65; /* Texto principal */
+}
+
+header {
+    background-color: #aea881; /* Color del header */
+    color: #fff;
+    padding: 10px 0;
     text-align: center;
+    position: relative;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+#carrito {
+    border: 1px solid #cec69f;
+    padding: 20px;
+    width: 60%;
+    margin: auto;
+    background-color: #ffffff; /* Fondo claro del carrito */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#lista-productos {
+    list-style-type: none;
+    padding: 0;
     margin: 20px 0;
 }
 
-.nav-link {
-    background-color: #007bff; 
-    color: #fff;
-    text-decoration: none; 
+.producto {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #cec69f;
+    font-size: 1rem;
+    color: #908a65;
+}
+
+#total {
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #908a65;
+}
+
+button {
+    background-color: #cec69f; /* Botones con paleta de color */
+    color: white;
+    border: none;
     border-radius: 5px;
     padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #aea881; /* Hover más oscuro */
+}
+
+.clear-btn {
+    background-color: #dc3545; /* Botón de limpiar */
+}
+
+.clear-btn:hover {
+    background-color: #c82333; /* Hover más oscuro */
+}
+
+.decrease-btn, .increase-btn {
+    background-color: #cec69f; /* Botones de aumentar/disminuir */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 0 5px;
+    font-size: 1rem;
+}
+
+.decrease-btn:hover, .increase-btn:hover {
+    background-color: #aea881; /* Hover más oscuro */
+}
+
+/* Estilos para la navegación */
+.navigation {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.nav-link {
+    background-color: #cec69f; /* Enlaces de navegación */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 10px 15px;
     font-size: 1em;
+    transition: background-color 0.3s;
+    margin-left: 10px;
 }
 
 .nav-link:hover {
-    background-color: #0056b3; 
+    background-color: #aea881; /* Hover más oscuro */
 }
